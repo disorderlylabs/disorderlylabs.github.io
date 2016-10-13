@@ -118,18 +118,53 @@
                 <div class="col-sm-4">
             <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Paper Title</h3>
+                <h3 class="panel-title"><a href="https://people.ucsc.edu/~palvaro/socc16.pdf">Automating Failure Testing Research at Internet Scale</a></h3>
             </div>
             <div class="panel-body">
-                Panel Abstract
+                Large-scale distributed systems must be built to anticipate
+and mitigate a variety of hardware and software failures.
+In order to build confidence that fault-tolerant systems are
+correctly implemented, Netflix (and similar enterprises) regularly
+run failure drills in which faults are deliberately injected
+in their production system. The combinatorial space
+of failure scenarios is too large to explore exhaustively. Existing
+failure testing approaches either randomly explore the
+space of potential failures randomly or exploit the “hunches”
+of domain experts to guide the search. Random strategies
+waste resources testing “uninteresting” faults, while
+programmer-guided approaches are only as good as human
+intuition and only scale with human effort.
+In this paper, we describe how we adapted and implemented
+a research prototype called lineage-driven fault injection
+(LDFI) to automate failure testing at Netflix. Along
+the way, we describe the challenges that arose adapting the
+LDFI model to the complex and dynamic realities of the Netflix architecture. We show how we implemented the adapted
+algorithm as a service atop the existing tracing and fault injection
+infrastructure, and present early results.
             </div>
             </div>
             <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Paper Title</h3>
+                <h3 class="panel-title"><a href="https://people.ucsc.edu/~palvaro/molly.pdf">Lineage-driven Fault Injection</a></h3>
             </div>
             <div class="panel-body">
-                Paper Abstract
+                Failure is always an option; in large-scale data management systems,
+it is practically a certainty. Fault-tolerant protocols and components
+are notoriously difficult to implement and debug. Worse
+still, choosing existing fault-tolerance mechanisms and integrating
+them correctly into complex systems remains an art form, and programmers
+have few tools to assist them.
+We propose a novel approach for discovering bugs in fault-tolerant
+data management systems: lineage-driven fault injection. A lineage-driven
+fault injector reasons backwards from correct system outcomes
+to determine whether failures in the execution could have
+prevented the outcome. We present MOLLY, a prototype of lineage-driven
+fault injection that exploits a novel combination of data lineage
+techniques from the database literature and state-of-the-art
+satisfiability testing. If fault-tolerance bugs exist for a particular
+configuration, MOLLY finds them rapidly, in many cases using an
+order of magnitude fewer executions than random fault injection.
+Otherwise, MOLLY certifies that the code is bug-free for that configuration.
             </div>
             </div>
         </div>
